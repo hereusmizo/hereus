@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { CircularProgress } from "@mui/material";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Wrapper from "./components/Wrapper";
+const Home = lazy(() => import("./pages/Home"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const ROUTES = [{ path: "/", component: <Home /> }];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Suspense
+        fallback={
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: 300,
+            }}
+          >
+            <CircularProgress />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          {ROUTES.map((item) => (
+            <Route
+              key={item.path}
+              path={item.path}
+              exact
+              element={item.component}
+            />
+          ))}
+        </Routes>
+      </Suspense>
+    </Wrapper>
   );
 }
 
