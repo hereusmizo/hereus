@@ -15,8 +15,8 @@ const QUICK_LINKS = [
     link: "/contact",
   },
   {
-    name: "Organization",
-    link: "/organization",
+    name: "Our Team",
+    link: "/team",
   },
 ];
 const LEGALS = [
@@ -28,26 +28,17 @@ const LEGALS = [
     name: "Privacy Policy",
     link: "/privacy-policy",
   },
-  {
-    name: "Cookies policy",
-    link: "/cookies-policy",
-  },
 ];
 const SOCIAL_MEDIA = [
   {
     name: "Facebook",
     image: "/facebook.png",
-    link: "",
+    link: "https://www.facebook.com/hereusmizo",
   },
   {
     name: "Instagram",
     image: "/instagram.png",
-    link: "",
-  },
-  {
-    name: "Twitter",
-    image: "/twitter.png",
-    link: "",
+    link: "https://www.instagram.com/hereus.in",
   },
 ];
 const Footer = () => {
@@ -58,7 +49,7 @@ const Footer = () => {
           key={item.name}
           component={Link}
           to={item.link}
-          style={{ color: "#fff", marginBottom: 2, textDecoration: "none" }}
+          style={{ color: "#eee", marginBottom: 5, textDecoration: "none" }}
         >
           {item.name}
         </Typography>
@@ -72,7 +63,7 @@ const Footer = () => {
           key={item.name}
           component={Link}
           to={item.link}
-          style={{ color: "#fff", marginBottom: 2, textDecoration: "none" }}
+          style={{ color: "#eee", marginBottom: 5, textDecoration: "none" }}
         >
           {item.name}
         </Typography>
@@ -97,7 +88,7 @@ const Footer = () => {
     <div
       style={{
         flexGrow: 1,
-        height: 250,
+        height: 350,
         backgroundColor: "#1D262D",
         color: "#fff",
       }}
@@ -123,7 +114,9 @@ const Footer = () => {
         </Grid>
       </Container>
       <div style={{ display: "flex", justifyContent: "center", marginTop: 40 }}>
-        <Typography>Copyright © Hereus {new Date().getFullYear()}</Typography>
+        <Typography>
+          © Hereus. All rights reserved | {new Date().getFullYear()}
+        </Typography>
       </div>
     </div>
   );

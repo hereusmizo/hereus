@@ -3,8 +3,20 @@ import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 const Home = lazy(() => import("./pages/Home"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Team = lazy(() => import("./pages/Team"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const ROUTES = [{ path: "/", component: <Home /> }];
+const ROUTES = [
+  { path: "/", component: <Home /> },
+  { path: "/portfolio", component: <Portfolio /> },
+  { path: "/privacy-policy", component: <PrivacyPolicy /> },
+  { path: "/contact", component: <Contact /> },
+  { path: "/team", component: <Team /> },
+  { path: "/terms-and-conditions", component: <TermsAndConditions /> },
+];
 function App() {
   return (
     <Wrapper>

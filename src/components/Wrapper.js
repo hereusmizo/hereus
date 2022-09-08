@@ -28,8 +28,8 @@ const MENUS = [
     route: "/contact",
   },
   {
-    name: "Organization",
-    route: "/organization",
+    name: "Our Team",
+    route: "/team",
   },
 ];
 const Wrapper = ({ children }) => {
@@ -146,9 +146,16 @@ const Wrapper = ({ children }) => {
                       textTransform: "none",
                       textDecorationColor: "#000",
                       textDecorationLine: "none",
+                      marginLeft: 5,
                     }}
                   >
-                    <Typography variant="body1">{item.name}</Typography>
+                    <Typography
+                      variant="body1"
+                      align={"center"}
+                      style={{ fontWeight: 500, fontFamily: "Roboto" }}
+                    >
+                      {item.name}
+                    </Typography>
                   </Button>
                 );
               })}

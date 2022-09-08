@@ -14,7 +14,7 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 12,
-    fontFamily: "Open Sans",
+    fontFamily: "Public Sans",
   },
 });
 export default theme;
