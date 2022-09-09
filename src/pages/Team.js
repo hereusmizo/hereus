@@ -24,7 +24,7 @@ const Team = () => {
     },
     {
       name: "Jacob Lalmalsawma",
-      photo: "/team/Jacob Lalmalsawma.jpg",
+      photo: "/team/Jacob Lalmalsawma.JPG",
       designation: "Project Manager",
     },
   ];
