@@ -11,7 +11,7 @@ const Banner = () => {
     <div
       style={{
         display: "flex",
-        backgroundImage: "url(/banner.jpg)",
+        backgroundImage: "url(/masthead.png)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 100%",
         backgroundPosition: "center center",
