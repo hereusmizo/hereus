@@ -9,22 +9,22 @@ const Team = () => {
   const TEAMS = [
     {
       name: "Lalchhandama",
-      photo: "/Lalchhandama.jpg",
+      photo: "/team/Lalchhandama.jpg",
       designation: "Chief Executive Officer",
     },
     {
       name: "Freddie Lalawmpuia Sailo",
-      photo: "/Lalchhandama.jpg",
-      designation: "Co-Founder & Head Of Design",
+      photo: "/team/Freddie.jpg",
+      designation: "Co-Founder",
     },
     {
       name: "Stephen Lalzahawma",
-      photo: "/Lalchhandama.jpg",
+      photo: "/team/Stephen Lalzahawma.jpg",
       designation: "Project Manager",
     },
     {
       name: "Jacob Lalmalsawma",
-      photo: "/Lalchhandama.jpg",
+      photo: "/team/Jacob Lalmalsawma.jpg",
       designation: "Project Manager",
     },
   ];
@@ -82,12 +82,12 @@ const Team = () => {
               >
                 <img
                   alt="Lalchhandama"
-                  src="/default.jpg"
+                  src={item.photo}
                   style={{
                     width: 200,
                     objectFit: "contain",
                     borderRadius: 5,
-                    boxShadow: "2px 5px 8px #ddd",
+                    boxShadow: "0px 4px 10px #aaa",
                   }}
                 />
                 <Typography

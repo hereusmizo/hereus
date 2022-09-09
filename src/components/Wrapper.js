@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -12,7 +12,7 @@ import {
   ListItem,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 const MENUS = [
   {
@@ -34,7 +34,7 @@ const MENUS = [
 ];
 const Wrapper = ({ children }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const navigate = useNavigate();
+  const location = useLocation().pathname;
 
   const renderDrawer = () => {
     return (
@@ -62,10 +62,17 @@ const Wrapper = ({ children }) => {
             <ListItem
               key={item.route}
               style={{
+                backgroundColor:
+                  item.route === "/"
+                    ? location === "/" && "#fff"
+                    : location.includes(item.route) && "#fff",
                 borderTopLeftRadius: 18,
                 borderBottomLeftRadius: 18,
               }}
               button
+              onClick={() => {
+                setOpenDrawer(false);
+              }}
               component={Link}
               to={item.route}
             >
@@ -74,7 +81,14 @@ const Wrapper = ({ children }) => {
                   <Typography
                     style={{
                       fontWeight: 600,
-                      color: "#fff",
+                      color:
+                        item.route === "/"
+                          ? location === "/"
+                            ? "#222"
+                            : "#fff"
+                          : location.includes(item.route)
+                          ? "#222"
+                          : "#fff",
                     }}
                   >
                     {item.name}

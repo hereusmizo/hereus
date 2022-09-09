@@ -1,6 +1,6 @@
 import { CircularProgress } from "@mui/material";
-import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 const Home = lazy(() => import("./pages/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
@@ -18,6 +18,10 @@ const ROUTES = [
   { path: "/terms-and-conditions", component: <TermsAndConditions /> },
 ];
 function App() {
+  const locationName = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [locationName]);
   return (
     <Wrapper>
       <Suspense
