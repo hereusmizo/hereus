@@ -81,7 +81,7 @@ const Team = () => {
                 }}
               >
                 <img
-                  alt="Lalchhandama"
+                  alt={item.name}
                   src={item.photo}
                   style={{
                     width: 200,
