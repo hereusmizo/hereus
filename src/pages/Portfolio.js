@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 const Portfolio = () => {
@@ -104,10 +104,10 @@ const Portfolio = () => {
       >
         <Typography
           align="center"
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
-            letterSpacing: 0.8,
+            fontWeight: "bolder",
+
             marginRight: 10,
 
             marginTop: 30,
@@ -117,10 +117,10 @@ const Portfolio = () => {
         </Typography>
         <Typography
           align="center"
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
-            letterSpacing: 0.8,
+            fontWeight: "bolder",
+
             marginTop: 30,
             color: "#1473E6",
           }}
@@ -128,79 +128,80 @@ const Portfolio = () => {
           PORTFOLIO
         </Typography>
       </div>
-
-      <Grid
-        container
-        style={{ marginTop: 20, paddingBottom: 70, background: "#F9F9FA" }}
-      >
-        {PORTFOLIOS.map((item) => {
-          return (
-            <Grid
-              item
-              key={item.name}
-              xs={12}
-              sm={6}
-              md={3}
-              lg={3}
-              xl={2}
-              style={{ padding: 10 }}
-            >
-              <div
-                style={{
-                  height: "100%",
-                  // width: "100%",
-                  backgroundColor: "#fff",
-                  boxShadow: "2px 4px 5px #ddd",
-                  padding: 20,
-                  borderRadius: 5,
-                  margin: 10,
-                }}
+      <Container>
+        <Grid
+          container
+          style={{ marginTop: 20, paddingBottom: 70, background: "#F9F9FA" }}
+        >
+          {PORTFOLIOS.map((item) => {
+            return (
+              <Grid
+                item
+                key={item.name}
+                xs={12}
+                sm={6}
+                md={3}
+                lg={3}
+                xl={3}
+                style={{ padding: 10 }}
               >
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <img
-                    alt={item.name}
-                    src={`/clients/${item.image}.png`}
-                    style={{ width: 80, height: 80 }}
-                  />
+                <div
+                  style={{
+                    height: "100%",
+                    // width: "100%",
+                    backgroundColor: "#fff",
+                    boxShadow: "2px 4px 5px #ddd",
+                    padding: 20,
+                    borderRadius: 5,
+                    margin: 10,
+                  }}
+                >
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <img
+                      alt={item.name}
+                      src={`/clients/${item.image}.png`}
+                      style={{ width: 80, height: 80 }}
+                    />
+                  </div>
+                  <Typography
+                    align="center"
+                    fontFamily="Roboto"
+                    fontWeight={500}
+                    style={{
+                      // letterSpacing: 1,
+                      color: item.color,
+                      marginTop: 10,
+                      fontSize: 14,
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                  <Typography
+                    align="center"
+                    style={{
+                      color: "#888",
+                      fontSize: 11,
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {item.type}
+                  </Typography>
+                  <Typography
+                    align="center"
+                    style={{
+                      color: "#888",
+                      marginTop: 8,
+                      fontSize: 11,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
                 </div>
-                <Typography
-                  align="center"
-                  fontFamily="Roboto"
-                  fontWeight={500}
-                  style={{
-                    // letterSpacing: 1,
-                    color: item.color,
-                    marginTop: 10,
-                    fontSize: 14,
-                  }}
-                >
-                  {item.name}
-                </Typography>
-                <Typography
-                  align="center"
-                  style={{
-                    color: "#888",
-                    fontSize: 11,
-                    fontStyle: "italic",
-                  }}
-                >
-                  {item.type}
-                </Typography>
-                <Typography
-                  align="center"
-                  style={{
-                    color: "#888",
-                    marginTop: 8,
-                    fontSize: 11,
-                  }}
-                >
-                  {item.description}
-                </Typography>
-              </div>
-            </Grid>
-          );
-        })}
-      </Grid>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
     </div>
   );
 };

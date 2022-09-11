@@ -17,10 +17,10 @@ const Contact = () => {
       >
         <Typography
           align="center"
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
-            letterSpacing: 0.8,
+            fontWeight: "bolder",
+
             marginRight: 10,
 
             marginTop: 30,
@@ -30,10 +30,10 @@ const Contact = () => {
         </Typography>
         <Typography
           align="center"
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
-            letterSpacing: 0.8,
+            fontWeight: "bolder",
+
             marginTop: 30,
             color: "#1473E6",
           }}

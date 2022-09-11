@@ -4,7 +4,7 @@ import {
   DesignServices,
   CastForEducation,
 } from "@mui/icons-material";
-import { Button, Divider, Grid, Typography } from "@mui/material";
+import { Button, Container, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 const Banner = () => {
   return (
@@ -21,6 +21,7 @@ const Banner = () => {
         height: 400,
         width: "100%",
         alignItems: "center",
+        borderBottom: "1px solid #ddd",
       }}
     >
       <div style={{ padding: 30, flex: 1.5, display: "flex" }}>
@@ -154,16 +155,13 @@ const Home = () => {
           flexWrap: "wrap",
         }}
       >
-        <Typography
-          variant="h3"
-          style={{ fontFamily: "Impact", letterSpacing: 0.8 }}
-        >
+        <Typography variant="h4" style={{ fontWeight: "bolder" }}>
           OUR
         </Typography>
         <Typography
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
+            fontWeight: "bolder",
             letterSpacing: 0.8,
             marginLeft: 10,
             color: "#1473E6",
@@ -204,7 +202,7 @@ const Home = () => {
                 </div>
                 <Typography
                   align="center"
-                  fontWeight={500}
+                  fontWeight={600}
                   style={{ letterSpacing: 1, color: item.color, marginTop: 10 }}
                 >
                   {item.name}
@@ -241,9 +239,9 @@ const Home = () => {
       >
         <Typography
           align="center"
-          variant="h3"
+          variant="h4"
           style={{
-            fontFamily: "Impact",
+            fontWeight: "bolder",
             letterSpacing: 0.8,
             marginRight: 10,
             color: "#1473E6",
@@ -253,8 +251,8 @@ const Home = () => {
         </Typography>
         <Typography
           align="center"
-          variant="h3"
-          style={{ fontFamily: "Impact", letterSpacing: 0.8 }}
+          variant="h4"
+          style={{ fontWeight: "bolder" }}
         >
           DO WE WORK WITH?
         </Typography>
@@ -271,8 +269,8 @@ const Home = () => {
               key={item.name}
               xs={6}
               sm={6}
-              md={2}
-              lg={2}
+              md={3}
+              lg={3}
               style={{ padding: 10 }}
             >
               <div
@@ -313,89 +311,91 @@ const Home = () => {
   );
   return (
     <div style={{ flexGrow: 1, backgroundColor: "#F9F9FA" }}>
-      <Banner />
-      <Grid container style={{ background: "#fff" }}>
-        <Grid item xs={12} sm={12} md={4} padding={5}>
-          <div>
-            <Typography
-              style={{
-                // fontFamily: "Roboto",
-                fontWeight: 800,
-                marginBottom: 10,
-                color: "#777",
-              }}
-            >
-              Colles ERP System
-            </Typography>
-            <Typography
-              variant="h4"
-              style={{
-                fontWeight: 800,
-              }}
-            >
-              The Most Reliable And Complex Enterprise Resource Planning System
-              for Educational Institutions
-            </Typography>
-            <img
-              alt="Colles"
-              src="/colles.png"
-              style={{ width: 100, height: 100, marginTop: 20 }}
-            />
-          </div>
+      <Container style={{ backgroundColor: "#F9F9FA" }}>
+        <Banner />
+        <Grid container style={{ background: "#fff" }}>
+          <Grid item xs={12} sm={12} md={4} padding={5}>
+            <div>
+              <Typography
+                style={{
+                  // fontFamily: "Roboto",
+                  fontWeight: 800,
+                  marginBottom: 10,
+                  color: "#777",
+                }}
+              >
+                Colles ERP System
+              </Typography>
+              <Typography
+                variant="h5"
+                style={{
+                  fontWeight: 700,
+                }}
+              >
+                The Most Reliable And Complex Enterprise Resource Planning
+                System for Educational Institutions
+              </Typography>
+              <img
+                alt="Colles"
+                src="/colles.png"
+                style={{ width: 100, height: 100, marginTop: 20 }}
+              />
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={12} md={8} padding={5}>
+            <div>
+              <Typography
+                variant="h6"
+                style={{
+                  textAlign: "justify",
+                }}
+              >
+                Hereus developed{" "}
+                <b style={{ color: "#1473E6" }}>`Colles ERP`</b> the most
+                complex Enterprise Resource Planning System for any Educational
+                Institutions (School, Colleges and Other Institutions).
+              </Typography>
+              <Typography
+                variant="h6"
+                style={{
+                  textAlign: "justify",
+                }}
+              >
+                <b style={{ color: "#1473E6" }}>`Colles ERP`</b> offers a
+                complete and flexible Enterprise Resource Planning System which
+                is accessible by Institutions' Staffs, Faculties/Teachers,
+                Students and Parents. It offers complete features where the
+                Institutions can manage their own Academic Data, Office Data,
+                Routines, Attendances, Test Marks, Examinations, Results,
+                Research & Academic Contributions, IQAC, RUSA, Extensions &
+                Clubs, Cell & Committee Report and so on.
+              </Typography>
+              <Button
+                component="a"
+                target="_blank"
+                href="https://colles.in/"
+                variant="contained"
+                size="large"
+                color="primary"
+                style={{
+                  textTransform: "none",
+                  fontWeight: 600,
+                  borderRadius: 20,
+                  marginTop: 30,
+                  letterSpacing: 0.8,
+                  textDecoration: "none",
+                }}
+              >
+                Learn More
+              </Button>
+            </div>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={12} md={8} padding={5}>
-          <div>
-            <Typography
-              variant="h6"
-              style={{
-                textAlign: "justify",
-              }}
-            >
-              Hereus developed <b style={{ color: "#1473E6" }}>`Colles ERP`</b>{" "}
-              the most complex Enterprise Resource Planning System for any
-              Educational Institutions (School, Colleges and Other
-              Institutions).
-            </Typography>
-            <Typography
-              variant="h6"
-              style={{
-                textAlign: "justify",
-              }}
-            >
-              <b style={{ color: "#1473E6" }}>`Colles ERP`</b> offers a complete
-              and flexible Enterprise Resource Planning System which is
-              accessible by Institutions' Staffs, Faculties/Teachers, Students
-              and Parents. It offers complete features where the Institutions
-              can manage their own Academic Data, Office Data, Routines,
-              Attendances, Test Marks, Examinations, Results, Research &
-              Academic Contributions, IQAC, RUSA, Extensions & Clubs, Cell &
-              Committee Report and so on.
-            </Typography>
-            <Button
-              component="a"
-              target="_blank"
-              href="https://colles.in/"
-              variant="contained"
-              size="large"
-              color="primary"
-              style={{
-                textTransform: "none",
-                fontWeight: 600,
-                borderRadius: 20,
-                marginTop: 30,
-                letterSpacing: 0.8,
-                textDecoration: "none",
-              }}
-            >
-              Learn More
-            </Button>
-          </div>
-        </Grid>
-      </Grid>
 
-      {renderServices()}
-      <Divider style={{ marginTop: 10 }} variant="middle" />
-      {renderClients()}
+        {renderServices()}
+        <Divider style={{ marginTop: 10 }} variant="middle" />
+        {renderClients()}
+      </Container>
     </div>
   );
 };
