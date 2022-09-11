@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
             marginTop: 30,
           }}
         >
-          PIVACY
+          PRIVACY
         </Typography>
         <Typography
           align="center"
