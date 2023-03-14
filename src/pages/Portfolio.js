@@ -8,6 +8,13 @@ const Portfolio = () => {
 
   const PORTFOLIOS = [
     {
+      name: "BookMaster",
+      image: "bookmaster",
+      type: "Website",
+      description:
+        "Bookmaster is a Professional online ticket booking platform. The main objective is to book local/national/international concerts,parties, local events, etc., tickets in online.",
+    },
+    {
       name: "Mission Organic Mizoram",
       image: "mom",
       type: "Website & Mobile",
