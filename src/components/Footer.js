@@ -28,6 +28,10 @@ const LEGALS = [
     name: "Privacy Policy",
     link: "/privacy-policy",
   },
+  {
+    name: "Refund Policy",
+    link: "/refund-policy",
+  },
 ];
 const SOCIAL_MEDIA = [
   {

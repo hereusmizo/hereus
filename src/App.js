@@ -8,6 +8,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Team = lazy(() => import("./pages/Team"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ROUTES = [
   { path: "/", component: <Home /> },
@@ -16,6 +17,7 @@ const ROUTES = [
   { path: "/contact", component: <Contact /> },
   { path: "/team", component: <Team /> },
   { path: "/terms-and-conditions", component: <TermsAndConditions /> },
+  { path: "/refund-policy", component: <RefundPolicy /> },
 ];
 function App() {
   const locationName = useLocation();
